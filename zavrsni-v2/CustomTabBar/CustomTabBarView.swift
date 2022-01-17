@@ -15,24 +15,26 @@ struct CustomTabBarView: View {
     @State var localSelection: TabBarItem
     
     var body: some View {
-        tabBarVersion2
-            .onChange(of: selection) { newValue in
-                withAnimation(.easeInOut) {
-                    localSelection = newValue
-                }
-            }
+        VStack {
+            Spacer()
+            tabBarVersion2
+                .onChange(of: selection) { newValue in
+                    withAnimation(.easeInOut) {
+                        localSelection = newValue
+                    }
+                }   
+        }
     }
 }
 
 struct CustomTabBarView_Previews: PreviewProvider {
     
-    static let tabs: [TabBarItem] = [.dashBoard, .settings, .garage]
+    static let tabs: [TabBarItem] = [.home, .settings, .style]
     
     
     static var previews: some View {
         VStack{
-            Spacer()
-            CustomTabBarView(tabs: tabs, selection: .constant(tabs.first!), localSelection: tabs.first!)   
+            CustomTabBarView(tabs: tabs, selection: .constant(tabs.first!), localSelection: tabs.first!)
         }
     }
 }
@@ -40,7 +42,10 @@ struct CustomTabBarView_Previews: PreviewProvider {
 extension CustomTabBarView {
     private func tabView(tab: TabBarItem) -> some View {
         VStack{
-            Image(systemName: tab.iconName)
+            Image(tab.iconName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 25, height: 25)
                 .font(.subheadline)
             Text((tab.title))
                 .font((.system(size: 10, weight: .semibold, design: .rounded)))
@@ -75,11 +80,7 @@ extension CustomTabBarView {
 extension CustomTabBarView {
     private func tabView2(tab: TabBarItem) -> some View {
         VStack{
-            Image(tab.iconName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 30, height: 30)
-                .font(.subheadline)
+            Image(systemName: tab.iconName)
             Text((tab.title))
                 .font((.system(size: 10, weight: .semibold, design: .rounded)))
         }
