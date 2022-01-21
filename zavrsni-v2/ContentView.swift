@@ -13,18 +13,17 @@ struct ContentView: View {
     @State private var tabSelection: TabBarItem = .home
     
     var body: some View {
-            CustomTabBarContainerView(selection: $tabSelection) { 
-                HomeView()
-                    .tabBarItem(tab: .home, selection: $tabSelection)
-                
-                Color.blue
-                    .tabBarItem(tab: .style, selection: $tabSelection)
-                
-                Color.green
-                    .tabBarItem(tab: .settings, selection: $tabSelection)
-                
-            }
+        CustomTabBarContainerView(selection: $tabSelection) { 
+            HomeView()
+                .tabBarItem(tab: .home, selection: $tabSelection)
+            
+            Color.blue
+                .tabBarItem(tab: .style, selection: $tabSelection)
+            
+            Color.red
+                .tabBarItem(tab: .settings, selection: $tabSelection)
         }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
