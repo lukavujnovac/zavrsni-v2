@@ -19,10 +19,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
                 .foregroundColor(Color("darkBlue"))
             VStack(spacing: 100){
-                Image("redbull")
-                    .resizable()
-                    .scaledToFit()
-                    .scaleEffect(0.6)
+                logoView
                 
                 HStack(spacing: 10) {
                     minusButton
@@ -102,5 +99,12 @@ extension HomeView {
                 .font(.system(size: 50, weight: .semibold, design: .monospaced))
                 .foregroundColor(Color("darkBlue"))
         }
+    }
+    
+    private var logoView: some View {
+        Image("redbull")
+            .resizable()
+            .scaledToFit()
+            .scaleEffect(0.6)
     }
 }
