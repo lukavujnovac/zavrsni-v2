@@ -22,7 +22,7 @@ struct HomeView: View {
                 logoView
                 
                 HStack(spacing: 10) {
-//                    minusButton
+                    minusButton
                     
                     RoundedRectangle(cornerRadius: 30)
                         .frame(width: 250, height: 150)
@@ -43,7 +43,7 @@ struct HomeView: View {
                                 .padding()
                         )
                     
-//                    plusButton
+                    plusButton
                 }
                 
                 HStack {

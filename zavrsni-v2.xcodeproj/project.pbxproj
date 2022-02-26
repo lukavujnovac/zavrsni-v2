@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5F4C824C279584D500DFBD35 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4C824B279584D500DFBD35 /* HomeView.swift */; };
 		5F4C824E27958AB900DFBD35 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4C824D27958AB900DFBD35 /* HomeViewModel.swift */; };
+		5F541FA727CA603900902539 /* EyeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F541FA627CA603900902539 /* EyeView.swift */; };
+		5F541FA927CA650F00902539 /* EyeBlinkCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F541FA827CA650F00902539 /* EyeBlinkCombine.swift */; };
+		5F541FAB27CA6ACE00902539 /* ARFaceGeometry.obj in Resources */ = {isa = PBXBuildFile; fileRef = 5F541FAA27CA6ACE00902539 /* ARFaceGeometry.obj */; };
+		5F541FAE27CA6BD600902539 /* NetworkingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F541FAD27CA6BD600902539 /* NetworkingRepository.swift */; };
 		5F8F5C6827B2F895000ABA84 /* EyeBlinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F5C6727B2F895000ABA84 /* EyeBlinkView.swift */; };
 		5F978F142794BE3B00CBC551 /* zavrsni_v2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F978F132794BE3B00CBC551 /* zavrsni_v2App.swift */; };
 		5F978F162794BE3B00CBC551 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F978F152794BE3B00CBC551 /* ContentView.swift */; };
@@ -23,6 +27,10 @@
 /* Begin PBXFileReference section */
 		5F4C824B279584D500DFBD35 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5F4C824D27958AB900DFBD35 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5F541FA627CA603900902539 /* EyeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeView.swift; sourceTree = "<group>"; };
+		5F541FA827CA650F00902539 /* EyeBlinkCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeBlinkCombine.swift; sourceTree = "<group>"; };
+		5F541FAA27CA6ACE00902539 /* ARFaceGeometry.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ARFaceGeometry.obj; sourceTree = "<group>"; };
+		5F541FAD27CA6BD600902539 /* NetworkingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRepository.swift; sourceTree = "<group>"; };
 		5F8F5C6727B2F895000ABA84 /* EyeBlinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeBlinkView.swift; sourceTree = "<group>"; };
 		5F978F102794BE3B00CBC551 /* zavrsni-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zavrsni-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F978F132794BE3B00CBC551 /* zavrsni_v2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zavrsni_v2App.swift; sourceTree = "<group>"; };
@@ -46,10 +54,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F541FAC27CA6AF100902539 /* FaceTracking */ = {
+			isa = PBXGroup;
+			children = (
+				5F541FAA27CA6ACE00902539 /* ARFaceGeometry.obj */,
+			);
+			path = FaceTracking;
+			sourceTree = "<group>";
+		};
+		5F541FAF27CA6DC200902539 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5F541FAD27CA6BD600902539 /* NetworkingRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		5F8F5C6627B2F85D000ABA84 /* EyeBlink */ = {
 			isa = PBXGroup;
 			children = (
 				5F8F5C6727B2F895000ABA84 /* EyeBlinkView.swift */,
+				5F541FA627CA603900902539 /* EyeView.swift */,
+				5F541FA827CA650F00902539 /* EyeBlinkCombine.swift */,
 			);
 			path = EyeBlink;
 			sourceTree = "<group>";
@@ -91,11 +117,12 @@
 			children = (
 				5F978F132794BE3B00CBC551 /* zavrsni_v2App.swift */,
 				5F978F152794BE3B00CBC551 /* ContentView.swift */,
+				5F541FAF27CA6DC200902539 /* Repositories */,
 				5F8F5C6927B2FD96000ABA84 /* Views */,
 				5F8F5C6A27B2FD9D000ABA84 /* ViewModels */,
 				5F8F5C6627B2F85D000ABA84 /* EyeBlink */,
 				5F978F232794BED700CBC551 /* CustomTabBar */,
-				5F978F172794BE3B00CBC551 /* Assets.xcassets */,
+				5F541FAC27CA6AF100902539 /* FaceTracking */,
 				5F978F192794BE3B00CBC551 /* Preview Content */,
 			);
 			path = "zavrsni-v2";
@@ -105,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				5F978F1A2794BE3B00CBC551 /* Preview Assets.xcassets */,
+				5F978F172794BE3B00CBC551 /* Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -179,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F978F1B2794BE3B00CBC551 /* Preview Assets.xcassets in Resources */,
+				5F541FAB27CA6ACE00902539 /* ARFaceGeometry.obj in Resources */,
 				5F978F182794BE3B00CBC551 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,8 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F541FA927CA650F00902539 /* EyeBlinkCombine.swift in Sources */,
+				5F541FAE27CA6BD600902539 /* NetworkingRepository.swift in Sources */,
 				5F978F162794BE3B00CBC551 /* ContentView.swift in Sources */,
 				5F4C824C279584D500DFBD35 /* HomeView.swift in Sources */,
+				5F541FA727CA603900902539 /* EyeView.swift in Sources */,
 				5F8F5C6827B2F895000ABA84 /* EyeBlinkView.swift in Sources */,
 				5F978F222794BED300CBC551 /* CustomTabBarContainerView.swift in Sources */,
 				5F4C824E27958AB900DFBD35 /* HomeViewModel.swift in Sources */,

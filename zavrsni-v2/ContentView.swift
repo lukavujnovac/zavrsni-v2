@@ -20,7 +20,7 @@ struct ContentView: View {
             Color.green
                 .tabBarItem(tab: .style, selection: $tabSelection)
             
-            Color.blue
+            Color.blue  
                 .tabBarItem(tab: .settings, selection: $tabSelection)
         }
     }
