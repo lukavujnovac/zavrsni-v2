@@ -46,6 +46,7 @@ struct EyeView: Shape {
 struct EyeView_Previews: PreviewProvider {
     static var previews: some View {
         EyeView()
+            .padding(.horizontal)
             .frame(height: 100)
     }
 }

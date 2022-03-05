@@ -41,7 +41,7 @@ class EyeBlinkViewModel: ObservableObject {
     var cancellabels = Set<AnyCancellable>()
     
     init() {
-        
+        addSubscribers()
     }
     
     private func addSubscribers() {
@@ -65,21 +65,4 @@ class EyeBlinkViewModel: ObservableObject {
 
 class MockData: ObservableObject {
     let blinks: [String] = ["true", "false", "true", "true", "true", "false", "true", "true", "true", "false", "false"]
-    
-    func imperativeProgramming() {
-        let array = [1, 2, 3, 4, 5, 6]
-        
-        var evenNumbers: [Int] = []
-        
-        for i in 0..<array.count {
-            if array[i] % 2 == 0 {
-                evenNumbers.append(array[i])
-            }
-        }
-    }
-    
-    func declarativeProgramming() {
-        let array = [1, 2, 3, 4, 5, 6]
-        let evenNumbers = array.filter{ $0 % 2 == 0 }
-    }
 }
